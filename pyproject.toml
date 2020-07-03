@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "shrvtv_brain_games"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["Artem Sharovatov <shrvtv@gmail.com>"]
 packages = [
@@ -8,11 +8,12 @@ packages = [
 ]
 [tool.poetry.dependencies]
 python = "^3.8"
+prompt = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
 
+[tool.poetry.scripts]
+brain-games = "brain_games.scripts.brain_games:main"
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
-[tool.poetry.scripts]
-brain-games = "brain_games.scripts.brain_games:main"
