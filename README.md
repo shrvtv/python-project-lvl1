@@ -1,3 +1,5 @@
 python-project-lvl1 by shrvtv
 
-[![asciinema](https://asciinema.org/a/Da0Ma3E3Z8qlsbHNrmCl5VbHx)](https://asciinema.org/a/Da0Ma3E3Z8qlsbHNrmCl5VbHx)
+[![asciicast](https://asciinema.org/a/Da0Ma3E3Z8qlsbHNrmCl5VbHx.svg)](https://asciinema.org/a/Da0Ma3E3Z8qlsbHNrmCl5VbHx)
+[![asciicast](https://asciinema.org/a/345357.svg)](https://asciinema.org/a/345357)
+https://asciinema.org/a/345357
