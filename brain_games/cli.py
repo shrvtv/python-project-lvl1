@@ -2,18 +2,18 @@ import prompt
 
 question = 'Question: '
 answer = 'Answer '
-counter = 0
-right_answer = ''
-correct = 'Correct!'
-
+start = 0
+end = 3
+right_answer_string = ''
+right_answer_int = 0
 
 def get_answer():
     answer = prompt.string('Your answer: ')
     return answer
 
 
-def wrong_answer(answer):
-    print(answer + ' is wrong answer ;(. Correct answer was ' + right_answer)
+def wrong_answer(answer, right_answer):
+    print(str(answer) + ' is wrong answer ;(. Correct answer was ' + str(right_answer))
 
 
 def welcome():
@@ -21,6 +21,7 @@ def welcome():
 
 
 def get_name():
+    print('')
     name = prompt.string('May I have your name? ')
     return name
 
@@ -29,9 +30,13 @@ def hello(user):
     print('{}, {}!'.format('Hello', user))
 
 
-def congratulations(user):
+def congrats(user):
         print('{}, {}!'.format('Congratulations', user))
 
 
 def try_again(user):
         print("Let's try again, " + user + '!')
+
+
+def correct():
+    print('Correct!')
