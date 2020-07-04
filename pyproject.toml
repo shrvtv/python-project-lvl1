@@ -12,7 +12,6 @@ prompt = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.3"
-flake8-tabs = "^2.2.2"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
