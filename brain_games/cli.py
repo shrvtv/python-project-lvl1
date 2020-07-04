@@ -2,7 +2,6 @@ import prompt
 
 question = 'Question: '
 answer = 'Answer '
-wrong_answer = ' is wrong answer ;(. Correct answer was '
 counter = 0
 right_answer = ''
 correct = 'Correct!'
@@ -14,7 +13,7 @@ def get_answer():
 
 
 def wrong_answer(answer):
-    print(answer + wrong_answer + right_answer)
+    print(answer + ' is wrong answer ;(. Correct answer was ' + right_answer)
 
 
 def welcome():
