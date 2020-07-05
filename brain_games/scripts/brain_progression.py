@@ -34,5 +34,7 @@ def main():
         else:
             brain_games.cli.wrong_answer(answer, brain_games.cli.right_answer_int)
     brain_games.cli.congrats(name)
+
+
 if __name__ == '__main__':
     main()

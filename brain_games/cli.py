@@ -49,3 +49,12 @@ def get_gcd(a, b):
             b = b % a
     c = a + b
     return c
+
+def is_prime(number):
+    i = 1
+    while i <= number:
+        if number % i == 0 and i != 1 and i != number:
+            return 'no'
+        else:
+            i += 1
+    return 'yes'
