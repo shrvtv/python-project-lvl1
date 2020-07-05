@@ -25,10 +25,11 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: install dependencies
       run: |
+        pip install wheel
+        python setup.py bdist_wheel
         pip install poetry
         pip install prompt
         pip install flake8
-        pip install wheel
         make install
     - name: run linter
       run: make lint
