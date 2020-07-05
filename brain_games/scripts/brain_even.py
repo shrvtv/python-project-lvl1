@@ -29,7 +29,7 @@ def main():
             brain_games.cli.wrong_answer(answer, brain_games.cli.right_answer_string)
             brain_games.cli.try_again(name)
 
-    brain_games.cli.congratulations(name)
+    brain_games.cli.congrats(name)
 
 
 if __name__ == '__main__':
