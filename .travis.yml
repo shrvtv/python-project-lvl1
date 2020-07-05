@@ -1,5 +1,6 @@
 language: python
 install:
+  - make install
   - pip install prompt
   - pip install flake8
   - pip install poetry
