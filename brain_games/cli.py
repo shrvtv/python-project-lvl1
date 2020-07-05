@@ -6,6 +6,7 @@ end = 3
 right_answer_string = ''
 right_answer_int = 0
 
+
 def get_answer():
     answer = prompt.string('Your answer: ')
     return answer
@@ -49,6 +50,7 @@ def get_gcd(a, b):
             b = b % a
     c = a + b
     return c
+
 
 def is_prime(number):
     i = 1

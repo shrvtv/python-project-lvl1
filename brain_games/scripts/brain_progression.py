@@ -9,7 +9,7 @@ def main():
     name = brain_games.cli.get_name()
     brain_games.cli.hello(name)
     print('')
-    
+
     while brain_games.cli.start < brain_games.cli.end:
         step = random.randint(1, 10)
         first_number = random.randint(0, 100)
@@ -20,7 +20,7 @@ def main():
         while start < end:
             if start == secret_number:
                 brain_games.cli.right_answer_int = first_number
-                print('..', end = ' ')
+                print('..', end=' ')
                 first_number += step
             else:
                 print(first_number, end=' ')
