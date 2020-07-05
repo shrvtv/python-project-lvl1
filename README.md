@@ -1,4 +1,6 @@
-python-project-lvl1 by shrvtv
+made by shrvtv
+
+install: pip install -i https://test.pypi.org/simple/ shrvtv-brain-games
 
 brain-even demo
 [![asciicast](https://asciinema.org/a/345335.svg)](https://asciinema.org/a/345335)
@@ -11,3 +13,6 @@ brain-gcd
 
 brain-progression
 [![asciicast](https://asciinema.org/a/345423.svg)](https://asciinema.org/a/345423)
+
+brain-prime
+[![asciicast](https://asciinema.org/a/345434.svg)](https://asciinema.org/a/345434)
