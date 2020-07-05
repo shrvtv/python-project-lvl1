@@ -10,8 +10,8 @@ def main():
     brain_games.cli.hello(name)
 
     while brain_games.cli.start < brain_games.cli.end:
-        first_number = random.randint(0, 10)
-        second_number = random.randint(0, 10)
+        first_number = random.randint(1, 25)
+        second_number = random.randint(1, 25)
         operation = random.randint(1, 3)
         
         if operation == 1:

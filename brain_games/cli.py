@@ -1,7 +1,6 @@
 import prompt
 
 question = 'Question: '
-answer = 'Answer '
 start = 0
 end = 3
 right_answer_string = ''
@@ -40,3 +39,13 @@ def try_again(user):
 
 def correct():
     print('Correct!')
+
+
+def get_gcd(a, b):
+    while a != 0 and b != 0:
+        if a > b:
+            a = a % b
+        else:
+            b = b % a
+    c = a + b
+    return c
