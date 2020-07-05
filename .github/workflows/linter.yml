@@ -25,9 +25,14 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: install dependencies
       run: |
-        pip install poetry
-        pip install prompt
-        pip install flake8
+        pip3 install --upgrade setuptools
+        sudo apt-get install gcc libpq-dev -y
+        sudo apt-get install python-dev  python-pip -y
+        sudo apt-get install python3-dev python3-pip python3-venv python3-wheel -y
+        pip3 install wheel
+        curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+        pip3 install prompt
+        pip3 install flake8
         make install
-    - name: run linter'
-        make lint
+    - name: run linter
+      run: make lint
