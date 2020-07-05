@@ -25,6 +25,7 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: install dependencies
       run: |
+        pip install --upgrade setuptools
         pip install wheel
         python setup.py bdist_wheel
         pip install poetry
