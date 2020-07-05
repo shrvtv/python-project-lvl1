@@ -27,7 +27,8 @@ jobs:
       run: |
         pip install --upgrade setuptools
         pip install wheel
-        python setup.py bdist_wheel
+        sudo python setup.py install
+        sudo python setup.py bdist_wheel
         pip install poetry
         pip install prompt
         pip install flake8
