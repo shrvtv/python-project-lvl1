@@ -29,5 +29,5 @@ jobs:
         pip install prompt
         pip install flake8
         make install
-    - name: run linter'
-        make lint
+    - name: run linter
+      run: make lint
