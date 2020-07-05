@@ -8,7 +8,8 @@ def main():
     print('Answer "yes" if number even otherwise answer "no".')
     name = brain_games.cli.get_name()
     brain_games.cli.hello(name)
-
+    print('')
+    
     while brain_games.cli.start < brain_games.cli.end:
 
         number = random.randint(0, 1000)

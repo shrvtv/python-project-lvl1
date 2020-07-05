@@ -8,7 +8,8 @@ def main():
     print('Find the greatest common divisor of given numbers.')
     name = brain_games.cli.get_name()
     brain_games.cli.hello(name)
-
+    print('')
+    
     while brain_games.cli.start < brain_games.cli.end:
         first_number = random.randint(1, 25)
         second_number = random.randint(1, 25)
