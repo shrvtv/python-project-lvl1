@@ -3,7 +3,7 @@ before_install:
   - sudo apt-get update
   - sudo apt-get -y install build-essential
 install:
-  - make install
+  - sudo make install
   - pip install prompt
   - pip install flake8
   - pip install poetry
