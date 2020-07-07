@@ -1,4 +1,2 @@
-install:
-	@poetry install
 lint:
-	poetry run flake8 brain_games
+	python3 -m flake8 brain_games
