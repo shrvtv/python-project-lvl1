@@ -5,7 +5,7 @@ description = "mini-games by shrvtv"
 repository = "https://github.com/shrvtv/python-project-lvl1"
 authors = ["Artem Sharovatov <shrvtv@gmail.com>"]
 classifiers = [
-    Topic :: Games/Entertainment
+    "Topic :: Games/Entertainment"
 ]
 packages = [
   { include = "brain_games" },
