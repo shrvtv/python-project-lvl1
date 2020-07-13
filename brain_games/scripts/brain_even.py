@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
+import prompt
 import random
 import brain_games.cli
 
 
 def main():
-    brain_games.cli.welcome()
+    print('Welcome to the Brain Games!')
     print('Answer "yes" if number even otherwise answer "no".')
     name = brain_games.cli.get_name()
     brain_games.cli.hello(name)
@@ -21,10 +22,10 @@ def main():
 
         print(brain_games.cli.question + str(number))
 
-        answer = brain_games.cli.get_answer()
+        answer = prompt.string('Your answer: ')
 
         if answer == brain_games.cli.right_answer_string:
-            brain_games.cli.correct()
+            print('Correct!')
             brain_games.cli.start += 1
         else:
             brain_games.cli.wrong_answer(answer, brain_games.cli.right_answer_string)

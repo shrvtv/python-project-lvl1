@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
+import prompt
 import random
 import brain_games.cli
 
 
 def main():
-    brain_games.cli.welcome()
+    print('Welcome to the Brain Games!')
     print('What number is missing in the progression?')
     name = brain_games.cli.get_name()
     brain_games.cli.hello(name)
@@ -27,9 +28,9 @@ def main():
                 first_number += step
             start += 1
         print('')
-        answer = int(brain_games.cli.get_answer())
+        answer = prompt.integer('Your answer: ')
         if answer == brain_games.cli.right_answer_int:
-            brain_games.cli.correct()
+            print('Correct!')
             brain_games.cli.start += 1
         else:
             brain_games.cli.wrong_answer(answer, brain_games.cli.right_answer_int)

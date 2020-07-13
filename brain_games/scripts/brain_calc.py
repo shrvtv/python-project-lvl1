@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
+import prompt
 import random
 import brain_games.cli
 
 
 def main():
-    brain_games.cli.welcome()
+    print('Welcome to the Brain Games!')
     print('What is the result of the expression?')
     name = brain_games.cli.get_name()
     brain_games.cli.hello(name)
@@ -19,9 +20,9 @@ def main():
             # * addition
             brain_games.cli.right_answer_int = first_number + second_number
             print(brain_games.cli.question + str(first_number) + ' + ' + str(second_number))
-            answer = int(brain_games.cli.get_answer())
+            answer = prompt.integer('Your answer: ')
             if answer == brain_games.cli.right_answer_int:
-                brain_games.cli.correct()
+                print('Correct!')
                 brain_games.cli.start += 1
             else:
                 brain_games.cli.wrong_answer(answer, brain_games.cli.right_answer_int)
@@ -30,9 +31,9 @@ def main():
             # * subtraction
             brain_games.cli.right_answer_int = first_number - second_number
             print(brain_games.cli.question + str(first_number) + ' - ' + str(second_number))
-            answer = int(brain_games.cli.get_answer())
+            answer = prompt.integer('Your answer: ')
             if answer == brain_games.cli.right_answer_int:
-                brain_games.cli.correct()
+                print('Correct!')
                 brain_games.cli.start += 1
             else:
                 brain_games.cli.wrong_answer(answer, brain_games.cli.right_answer_int)
@@ -41,9 +42,9 @@ def main():
             # * multiplication
             brain_games.cli.right_answer_int = first_number * second_number
             print(brain_games.cli.question + str(first_number) + ' * ' + str(second_number))
-            answer = int(brain_games.cli.get_answer())
+            answer = prompt.integer('Your answer: ')
             if answer == brain_games.cli.right_answer_int:
-                brain_games.cli.correct()
+                print('Correct!')
                 brain_games.cli.start += 1
             else:
                 brain_games.cli.wrong_answer(answer, brain_games.cli.right_answer_int)
