@@ -25,7 +25,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: install dependencies
         run: |
-          pip3 install flake8
+          make install
       #Make install
       - name: run linter
         run: make lint
