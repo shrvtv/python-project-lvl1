@@ -15,23 +15,24 @@ def get_gcd(a, b):
 
 
 def main():
+    start = 0
+    end = 3
     print('Welcome to the Brain Games!')
     print('Find the greatest common divisor of given numbers.')
     name = brain_games.cli.get_name()
     brain_games.cli.hello(name)
-    print('')
 
-    while brain_games.cli.start < brain_games.cli.end:
+    while start < end:
         first_number = random.randint(1, 25)
         second_number = random.randint(1, 25)
-        brain_games.cli.right_answer_int = get_gcd(first_number, second_number)
-        print(brain_games.cli.question + str(first_number) + ' ' + str(second_number))
-        answer = int(prompt.string('Your answer: '))
-        if answer == brain_games.cli.right_answer_int:
+        right_answer = get_gcd(first_number, second_number)
+        print('{}: {} {}'.format('Question', str(first_number), str(second_number)))
+        answer = prompt.integer('Your answer: ')
+        if answer == right_answer:
             print('Correct!')
-            brain_games.cli.start += 1
+            start += 1
         else:
-            brain_games.cli.wrong_answer(answer, brain_games.cli.right_answer_int)
+            brain_games.cli.wrong_answer(answer, right_answer)
     brain_games.cli.congrats(name)
 
 
