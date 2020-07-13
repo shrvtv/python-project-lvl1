@@ -1,5 +1,5 @@
 ![linter](https://github.com/shrvtv/python-project-lvl1/workflows/linter/badge.svg)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5a24766d7e24d2c2546c/maintainability)](https://codeclimate.com/github/shrvtv/python-project-lvl1/maintainability)
 
 install: pip install -i https://test.pypi.org/simple/ shrvtv-brain-games
 
