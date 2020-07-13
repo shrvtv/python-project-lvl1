@@ -21,3 +21,13 @@ def congrats(user):
 
 def try_again(user):
         print("Let's try again, " + user + '!')
+
+
+def check_answer(start, name, answer, right_answer):
+    if answer == right_answer:
+        print('Correct!')
+        start += 1
+    else:
+        wrong_answer(answer, right_answer)
+        try_again(name)
+    return start

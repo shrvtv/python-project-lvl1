@@ -27,11 +27,7 @@ def main():
         right_answer = is_prime(number)
         print('Question: ' + str(number))
         answer = prompt.string('Your answer: ')
-        if answer == right_answer:
-            print('Correct!')
-            start += 1
-        else:
-            brain_games.cli.wrong_answer(answer, right_answer)
+        start = brain_games.cli.check_answer(start, name, answer, right_answer)
     brain_games.cli.congrats(name)
 
 

@@ -28,11 +28,7 @@ def main():
         right_answer = get_gcd(first_number, second_number)
         print('{}: {} {}'.format('Question', str(first_number), str(second_number)))
         answer = prompt.integer('Your answer: ')
-        if answer == right_answer:
-            print('Correct!')
-            start += 1
-        else:
-            brain_games.cli.wrong_answer(answer, right_answer)
+        start = brain_games.cli.check_answer(start, name, answer, right_answer)
     brain_games.cli.congrats(name)
 
 
