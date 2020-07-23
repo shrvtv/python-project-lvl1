@@ -2,7 +2,8 @@ import prompt
 
 
 def wrong_answer(answer, right_answer):
-    print(str(answer) + ' is wrong answer ;(. Correct answer was ' + str(right_answer))
+    line = ' is wrong answer ;(. Correct answer was '
+    print(str(answer) + line + str(right_answer))
 
 
 def get_name():
@@ -16,11 +17,11 @@ def hello(user):
 
 
 def congrats(user):
-        print('{}, {}!'.format('Congratulations', user))
+    print('{}, {}!'.format('Congratulations', user))
 
 
 def try_again(user):
-        print("Let's try again, " + user + '!')
+    print("Let's try again, " + user + '!')
 
 
 def check_answer(name, answer, right_answer):
