@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "shrvtv_brain_games"
-version = "0.8.0"
+version = "0.8.1"
 description = "mini-games by shrvtv"
 repository = "https://github.com/shrvtv/python-project-lvl1"
 authors = ["Artem Sharovatov <shrvtv@gmail.com>"]
