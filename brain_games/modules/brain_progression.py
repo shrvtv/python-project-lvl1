@@ -28,6 +28,10 @@ def main():
             start_line += 1
         print('')
         answer = prompt.integer('Your answer: ')
-        if brain_games.cli.check_answer(name, answer, right_answer):
+        if brain_games.cli.check_answer(answer, right_answer):
+            print('Correct!')
             tries -= 1
+        else:
+            brain_games.cli.wrong_answer(answer, right_answer)
+            brain_games.cli.try_again(name)
     brain_games.cli.congrats(name)

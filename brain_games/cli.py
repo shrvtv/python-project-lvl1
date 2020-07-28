@@ -24,11 +24,8 @@ def try_again(user):
     print("Let's try again, " + user + '!')
 
 
-def check_answer(name, answer, right_answer):
+def check_answer(answer, right_answer):
     if answer == right_answer:
-        print('Correct!')
         return True
     else:
-        wrong_answer(answer, right_answer)
-        try_again(name)
         return False
