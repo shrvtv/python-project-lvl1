@@ -1,31 +1,29 @@
 import prompt
 
 
-def wrong_answer(answer, right_answer):
-    line = ' is wrong answer ;(. Correct answer was '
-    print(str(answer) + line + str(right_answer))
+tries = 3
+name = ''
 
 
-def get_name():
-    print('')
+def congrats():
+    global name
+    print('{}, {}!'.format('Congratulations', name))
+
+
+def start():
+    global name
+    print('Welcome to the Brain Games!')
+    print('What is the result of the expression?', end='\n\n')
     name = prompt.string('May I have your name? ')
-    return name
-
-
-def hello(user):
-    print('{}, {}!'.format('Hello', user), end='\n\n')
-
-
-def congrats(user):
-    print('{}, {}!'.format('Congratulations', user))
-
-
-def try_again(user):
-    print("Let's try again, " + user + '!')
+    print('{}, {}!'.format('Hello', name), end='\n\n')
 
 
 def check_answer(answer, right_answer):
+    global tries, name
     if answer == right_answer:
-        return True
+        print('Correct!')
+        tries -= 1
     else:
-        return False
+        line = ' is wrong answer ;(. Correct answer was '
+        print(str(answer) + line + str(right_answer))
+        print("Let's try again, " + name + '!')

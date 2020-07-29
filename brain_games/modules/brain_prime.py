@@ -14,21 +14,18 @@ def is_prime(number):
 
 
 def main():
-    tries = 3
-    print('Welcome to the Brain Games!')
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    name = brain_games.cli.get_name()
-    brain_games.cli.hello(name)
 
-    while tries:
+    brain_games.cli.start()
+
+    while brain_games.cli.tries:
+
         number = random.randint(1, 100)
+
         right_answer = is_prime(number)
+
         print('Question: ' + str(number))
+
         answer = prompt.string('Your answer: ')
-        if brain_games.cli.check_answer(answer, right_answer):
-            print('Correct!')
-            tries -= 1
-        else:
-            brain_games.cli.wrong_answer(answer, right_answer)
-            brain_games.cli.try_again(name)
-    brain_games.cli.congrats(name)
+        brain_games.cli.check_answer(answer, right_answer)
+
+    brain_games.cli.congrats()
