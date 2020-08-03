@@ -1,5 +1,6 @@
 import prompt
 import random
+import operator
 import brain_games.cli
 
 
@@ -14,19 +15,19 @@ def main():
         operation = random.choice(operations)
 
         if operation == 'addition':
-            right_answer = first_number + second_number
+            right_answer = operator.add(first_number, second_number)
             print('{}: {} + {}'.format('Question', str(first_number), str(second_number)))
             answer = prompt.integer('Your answer: ')
             brain_games.cli.check_answer(answer, right_answer)
 
         elif operation == 'subtraction':
-            right_answer = first_number - second_number
+            right_answer = operator.sub(first_number, second_number)
             print('{}: {} - {}'.format('Question', str(first_number), str(second_number)))
             answer = prompt.integer('Your answer: ')
             brain_games.cli.check_answer(answer, right_answer)
 
         elif operation == 'multiplication':
-            right_answer = first_number * second_number
+            right_answer = operator.mul(first_number, second_number)
             print('{}: {} * {}'.format('Question', str(first_number), str(second_number)))
             answer = prompt.integer('Your answer: ')
             brain_games.cli.check_answer(answer, right_answer)

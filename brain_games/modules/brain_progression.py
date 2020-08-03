@@ -12,7 +12,7 @@ def line():
     number = random.randint(0, 100)
     start_line = 0
     end_line = 10
-    secret_number = random.randint(0, 9)
+    secret_number = random.randint(start_line, end_line - 1)
 
     print('Question: ', end='')
 

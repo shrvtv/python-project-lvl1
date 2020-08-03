@@ -3,14 +3,17 @@ import random
 import brain_games.cli
 
 
+dictionary = {True: 'yes', False: 'no'}
+
+
 def is_prime(number):
     i = 1
     while i <= number:
         if number % i == 0 and i != 1 and i != number:
-            return 'no'
+            return False
         else:
             i += 1
-    return 'yes'
+    return True
 
 
 def main():
@@ -21,7 +24,7 @@ def main():
 
         number = random.randint(1, 100)
 
-        right_answer = is_prime(number)
+        right_answer = dictionary.get(is_prime(number))
 
         print('Question: ' + str(number))
 
