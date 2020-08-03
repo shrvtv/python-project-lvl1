@@ -5,7 +5,7 @@ import prompt
 def main():
 	print('Welcome to the Brain Games!')
 	name = prompt.string('May I have your name? ')
-	print('{}, {}!'.format('Hello', name), end='\n\n')
+	print('{}, {}!'.format('Hello', name))
 
 
 if __name__ == '__main__':

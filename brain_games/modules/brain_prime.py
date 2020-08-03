@@ -1,6 +1,4 @@
-import prompt
 import random
-import brain_games.cli
 
 
 dictionary = {True: 'yes', False: 'no'}
@@ -17,18 +15,18 @@ def is_prime(number):
 
 
 def main():
+    result = []
+    list = 3
 
-    brain_games.cli.start()
-
-    while brain_games.cli.tries:
+    while list:
 
         number = random.randint(1, 100)
 
-        right_answer = dictionary.get(is_prime(number))
+        right_answer = str(dictionary.get(is_prime(number)))
 
-        print('Question: ' + str(number))
+        question = ('Question: ' + str(number))
 
-        answer = prompt.string('Your answer: ')
-        brain_games.cli.check_answer(answer, right_answer)
+        result.append((question, right_answer))
 
-    brain_games.cli.congrats()
+        list -= 1
+    return result

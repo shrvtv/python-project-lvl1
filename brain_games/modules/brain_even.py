@@ -1,13 +1,11 @@
-import prompt
 import random
-import brain_games.cli
 
 
 def main():
+    result = []
+    list = 3
 
-    brain_games.cli.start()
-
-    while brain_games.cli.tries:
+    while list:
 
         number = random.randint(0, 1000)
 
@@ -16,10 +14,9 @@ def main():
         else:
             right_answer = 'no'
 
-        print('Question: ' + str(number))
+        question = ('Question: ' + str(number))
 
-        answer = prompt.string('Your answer: ')
+        result.append((question, right_answer))
 
-        brain_games.cli.check_answer(answer, right_answer)
-
-    brain_games.cli.congrats()
+        list -= 1
+    return result

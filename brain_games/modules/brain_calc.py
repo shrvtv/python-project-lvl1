@@ -1,35 +1,35 @@
-import prompt
 import random
 import operator
-import brain_games.cli
 
 
 def main():
-    brain_games.cli.start()
     operations = ['addition', 'subtraction', 'multiplication']
+    result = []
+    question = ''
+    right_answer = 0
+    list = 3
 
-    while brain_games.cli.tries:
+    while list:
 
         first_number = random.randint(1, 25)
         second_number = random.randint(1, 25)
         operation = random.choice(operations)
 
         if operation == 'addition':
-            right_answer = operator.add(first_number, second_number)
-            print('{}: {} + {}'.format('Question', str(first_number), str(second_number)))
-            answer = prompt.integer('Your answer: ')
-            brain_games.cli.check_answer(answer, right_answer)
+            right_answer = str(operator.add(first_number, second_number))
+            question = '{}: {} + {}'.format('Question', str(first_number), str(second_number))
+            result.append((question, right_answer))
+            list -= 1
 
         elif operation == 'subtraction':
-            right_answer = operator.sub(first_number, second_number)
-            print('{}: {} - {}'.format('Question', str(first_number), str(second_number)))
-            answer = prompt.integer('Your answer: ')
-            brain_games.cli.check_answer(answer, right_answer)
+            right_answer = str(operator.sub(first_number, second_number))
+            question = '{}: {} - {}'.format('Question', str(first_number), str(second_number))
+            result.append((question, right_answer))
+            list -= 1
 
         elif operation == 'multiplication':
-            right_answer = operator.mul(first_number, second_number)
-            print('{}: {} * {}'.format('Question', str(first_number), str(second_number)))
-            answer = prompt.integer('Your answer: ')
-            brain_games.cli.check_answer(answer, right_answer)
-
-    brain_games.cli.congrats()
+            right_answer = str(operator.mul(first_number, second_number))
+            question = '{}: {} * {}'.format('Question', str(first_number), str(second_number))
+            result.append((question, right_answer))
+            list -= 1
+    return result
