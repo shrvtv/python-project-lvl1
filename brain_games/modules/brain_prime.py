@@ -27,9 +27,9 @@ def get_list():
 
         right_answer = str(dictionary.get(is_prime(number)))
 
-        question = ('Question: ' + str(number))
+        string = str(number)
 
-        result.append((question, right_answer))
+        result.append((string, right_answer))
 
         tries -= 1
     return result

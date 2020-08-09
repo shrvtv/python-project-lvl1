@@ -15,20 +15,19 @@ def get_list():
         start_line = 0
         end_line = 10
         secret_number = random.randint(start_line, end_line - 1)
-
-        question = 'Question: '
+        string = ''
 
         while start_line < end_line:
             if start_line == secret_number:
                 right_answer = str(number)
-                question += ' .. '
+                string += ' .. '
                 number += step
             else:
-                question += str(number) + ' '
+                string += str(number) + ' '
                 number += step
             start_line += 1
 
-        result.append((question, right_answer))
+        result.append((string, right_answer))
         tries -= 1
     return result
 

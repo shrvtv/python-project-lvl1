@@ -24,8 +24,8 @@ def get_list():
         second_number = random.randint(1, 25)
 
         right_answer = str(get_gcd(first_number, second_number))
-        question = '{}: {} {}'.format('Question', str(first_number), str(second_number))
-        result.append((question, right_answer))
+        string = '{} {}'.format(str(first_number), str(second_number))
+        result.append((string, right_answer))
 
         tries -= 1
     return result

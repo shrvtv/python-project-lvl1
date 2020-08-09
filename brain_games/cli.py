@@ -17,10 +17,11 @@ def engine(questions_and_answers):
     print(questions_and_answers[0], end='\n\n')
     name = prompt.string('May I have your name? ')
     print('{}, {}!'.format('Hello', name), end='\n\n')
+    question = 'Question: '
 
     while tries <= 3:
-        question, right_answer = questions_and_answers[tries]
-        print(question)
+        string, right_answer = questions_and_answers[tries]
+        print(question + string)
         answer = prompt.string('Your answer: ')
 
         if check_answer(answer, right_answer):

@@ -17,8 +17,8 @@ def get_list():
         else:
             right_answer = 'no'
 
-        question = ('Question: ' + str(number))
-        result.append((question, right_answer))
+        string = str(number)
+        result.append((string, right_answer))
 
         tries -= 1
     return result

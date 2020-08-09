@@ -25,8 +25,8 @@ def get_list():
         elif operation == '*':
             right_answer = str(operator.mul(first_number, second_number))
 
-        question = '{}: {} {} {}'.format('Question', str(first_number), operation, str(second_number))
-        result.append((question, right_answer))
+        string = '{} {} {}'.format(str(first_number), operation, str(second_number))
+        result.append((string, right_answer))
         tries -= 1
     return result
 
