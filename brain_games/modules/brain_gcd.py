@@ -1,4 +1,5 @@
 import random
+import brain_games.cli
 
 
 def get_gcd(a, b):
@@ -11,20 +12,24 @@ def get_gcd(a, b):
     return c
 
 
-def main():
+def get_list():
     result = []
-    list = 3
+    tries = 3
+    string = 'Find the greatest common divisor of given numbers.'
+    result.append(string)
 
-    while list:
+    while tries:
 
         first_number = random.randint(1, 25)
         second_number = random.randint(1, 25)
 
         right_answer = str(get_gcd(first_number, second_number))
-
         question = '{}: {} {}'.format('Question', str(first_number), str(second_number))
-
         result.append((question, right_answer))
 
-        list -= 1
+        tries -= 1
     return result
+
+
+def main():
+    brain_games.cli.engine(get_list())

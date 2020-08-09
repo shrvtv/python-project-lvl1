@@ -1,4 +1,5 @@
 import random
+import brain_games.cli
 
 
 dictionary = {True: 'yes', False: 'no'}
@@ -14,11 +15,13 @@ def is_prime(number):
     return True
 
 
-def main():
+def get_list():
     result = []
-    list = 3
+    tries = 3
+    string = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    result.append(string)
 
-    while list:
+    while tries:
 
         number = random.randint(1, 100)
 
@@ -28,5 +31,9 @@ def main():
 
         result.append((question, right_answer))
 
-        list -= 1
+        tries -= 1
     return result
+
+
+def main():
+    brain_games.cli.engine(get_list())

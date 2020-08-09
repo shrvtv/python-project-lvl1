@@ -11,19 +11,20 @@ def check_answer(answer, right_answer):
         return False
 
 
-def engine(list):
-    tries = 2
-    name = ''
+def engine(questions_and_answers):
+    tries = 1
     print('Welcome to the Brain Games!')
-    print('What is the result of the expression?', end='\n\n')
+    print(questions_and_answers[0], end='\n\n')
     name = prompt.string('May I have your name? ')
     print('{}, {}!'.format('Hello', name), end='\n\n')
-    while tries > -1:
-        question, right_answer = list[tries]
+
+    while tries <= 3:
+        question, right_answer = questions_and_answers[tries]
         print(question)
         answer = prompt.string('Your answer: ')
+
         if check_answer(answer, right_answer):
-            tries -= 1
+            tries += 1
         else:
             print("Let's try again, " + name + '!')
 

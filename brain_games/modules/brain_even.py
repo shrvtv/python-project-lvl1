@@ -1,11 +1,14 @@
 import random
+import brain_games.cli
 
 
-def main():
+def get_list():
     result = []
-    list = 3
+    tries = 3
+    string = 'Answer "yes" if number even otherwise answer "no".'
+    result.append(string)
 
-    while list:
+    while tries:
 
         number = random.randint(0, 1000)
 
@@ -15,8 +18,11 @@ def main():
             right_answer = 'no'
 
         question = ('Question: ' + str(number))
-
         result.append((question, right_answer))
 
-        list -= 1
+        tries -= 1
     return result
+
+
+def main():
+    brain_games.cli.engine(get_list())

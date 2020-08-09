@@ -4,8 +4,7 @@ import brain_games.cli
 
 
 def main():
-    list = brain_games.modules.brain_gcd.main()
-    brain_games.cli.engine(list)
+    brain_games.modules.brain_gcd.main()
 
 
 if __name__ == '__main__':

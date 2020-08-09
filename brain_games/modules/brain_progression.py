@@ -1,11 +1,14 @@
 import random
+import brain_games.cli
 
 
-def main():
+def get_list():
     result = []
-    list = 3
+    tries = 3
+    string = 'What number is missing in the progression?'
+    result.append(string)
 
-    while list:
+    while tries:
         right_answer = 0
         step = random.randint(1, 10)
         number = random.randint(0, 100)
@@ -23,10 +26,12 @@ def main():
             else:
                 question += str(number) + ' '
                 number += step
-
             start_line += 1
 
         result.append((question, right_answer))
-
-        list -= 1
+        tries -= 1
     return result
+
+
+def main():
+    brain_games.cli.engine(get_list())
