@@ -20,8 +20,7 @@ def is_prime(number):
 def get_list():
     result = []
     tries = 3
-    string = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    result.append(string)
+    result.append('Answer "yes" if given number is prime. Otherwise answer "no".')
 
     while tries:
 

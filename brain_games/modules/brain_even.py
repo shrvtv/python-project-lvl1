@@ -5,8 +5,7 @@ import brain_games.cli
 def get_list():
     result = []
     tries = 3
-    string = 'Answer "yes" if number even otherwise answer "no".'
-    result.append(string)
+    result.append('Answer "yes" if number even otherwise answer "no".')
 
     while tries:
 

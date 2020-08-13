@@ -5,11 +5,10 @@ import brain_games.cli
 
 def get_list():
     operations = ['+', '-', '*']
-    string = 'What is the result of the expression?'
     right_answer = ''
     result = []
     tries = 3
-    result.append(string)
+    result.append('What is the result of the expression?')
 
     while tries:
         first_number = random.randint(1, 25)

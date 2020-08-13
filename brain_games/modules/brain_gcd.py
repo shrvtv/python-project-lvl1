@@ -15,8 +15,7 @@ def get_gcd(a, b):
 def get_list():
     result = []
     tries = 3
-    string = 'Find the greatest common divisor of given numbers.'
-    result.append(string)
+    result.append('Find the greatest common divisor of given numbers.')
 
     while tries:
 
