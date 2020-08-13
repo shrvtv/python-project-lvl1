@@ -9,23 +9,22 @@ def get_list():
     result.append(string)
 
     while tries:
-        right_answer = 0
+        right_answer = ''
+        pointer = 0
+        string = ''
         step = random.randint(1, 10)
         number = random.randint(0, 100)
-        position = 0
-        length = 10
-        secret_number = random.randint(position, length)
-        string = ''
+        secret_number_position = random.randint(0, 10)
 
-        while position < length:
-            if position == secret_number:
+        while pointer < 10:
+            if pointer == secret_number_position:
                 right_answer = str(number)
                 string += ' .. '
                 number += step
             else:
                 string += str(number) + ' '
                 number += step
-            position += 1
+            pointer += 1
 
         result.append((string, right_answer))
         tries -= 1
