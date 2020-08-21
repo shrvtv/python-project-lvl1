@@ -4,7 +4,7 @@ import brain_games.cli
 
 
 def main():
-    brain_games.modules.brain_prime.main()
+    brain_games.modules.brain_prime.start_game()
 
 
 if __name__ == '__main__':

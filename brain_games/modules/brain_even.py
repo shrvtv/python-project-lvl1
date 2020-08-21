@@ -23,5 +23,5 @@ def get_list():
     return result
 
 
-def main():
+def start_game():
     brain_games.cli.engine(get_list())
