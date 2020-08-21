@@ -2,6 +2,9 @@ import random
 import brain_games.cli
 
 
+description = 'What number is missing in the progression?'
+
+
 def get_progression():
     i = 0
     result = []
@@ -15,7 +18,7 @@ def get_progression():
     return result
 
 
-def get_string_and_answer():
+def get_question_and_answer():
     progression = get_progression()
     secret_number_position = random.randint(0, 10)
 
@@ -23,20 +26,9 @@ def get_string_and_answer():
     progression[secret_number_position] = '..'
 
     progression = map(str, progression)
-    string = ' '.join(progression)
-    return string, secret_number
-
-
-def get_list():
-    result = []
-    tries = 3
-    result.append('What number is missing in the progression?')
-
-    while tries:
-        result.append(get_string_and_answer())
-        tries -= 1
-    return result
+    question = ' '.join(progression)
+    return question, secret_number
 
 
 def start_game():
-    brain_games.cli.engine(get_list())
+    brain_games.cli.engine(get_question_and_answer, description)
