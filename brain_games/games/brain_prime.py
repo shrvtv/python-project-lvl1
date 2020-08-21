@@ -9,6 +9,7 @@ description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 def is_prime(number):
     if number <= 1:
         return False
+
     i = 1
     while i <= number / 2:
         if number % i == 0 and i != 1 and i != number:
