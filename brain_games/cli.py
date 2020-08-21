@@ -9,20 +9,20 @@ def check_answer(answer, right_answer):
 
 
 def engine(function, description):
-    tries = 3
+    amount_of_tries = 3
     print('Welcome to the Brain Games!')
     print(description, end='\n\n')
     name = prompt.string('May I have your name? ')
     print('{}, {}!'.format('Hello', name), end='\n\n')
 
-    while tries:
+    while amount_of_tries:
         question, right_answer = function()
         print('Question: ' + question)
         answer = prompt.string('Your answer: ')
 
         if check_answer(answer, right_answer):
             print('Correct!')
-            tries -= 1
+            amount_of_tries -= 1
         else:
             print(str(answer) + ' is wrong answer ;(. Correct answer was ' + str(right_answer))
             print("Let's try again, " + name + '!')

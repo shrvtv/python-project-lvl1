@@ -20,8 +20,6 @@ def is_prime(number):
 
 
 def get_question_and_answer():
-    result = []
-    tries = 3
     number = random.randint(1, 100)
 
     right_answer = str(dictionary.get(is_prime(number)))
