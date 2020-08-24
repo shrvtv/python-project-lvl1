@@ -12,7 +12,7 @@ def get_gcd(a, b):
     return c
 
 
-description = 'Find the greatest common divisor of given numbers.'
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def get_question_and_answer():
@@ -20,9 +20,9 @@ def get_question_and_answer():
     second_number = random.randint(1, 25)
 
     right_answer = str(get_gcd(first_number, second_number))
-    string = '{} {}'.format(str(first_number), str(second_number))
-    return string, right_answer
+    question = '{} {}'.format(str(first_number), str(second_number))
+    return question, right_answer
 
 
 def start_game():
-    brain_games.cli.engine(get_question_and_answer, description)
+    brain_games.cli.start_game(get_question_and_answer, DESCRIPTION)

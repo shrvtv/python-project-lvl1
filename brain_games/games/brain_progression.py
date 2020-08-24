@@ -2,7 +2,7 @@ import random
 import brain_games.cli
 
 
-description = 'What number is missing in the progression?'
+DESCRIPTION = 'What number is missing in the progression?'
 
 
 def get_progression(number, step, length):
@@ -15,11 +15,11 @@ def get_progression(number, step, length):
 
 
 def get_question_and_answer():
+    LENGTH = 10
     step = random.randint(1, 10)
     number = random.randint(0, 100)
-    progression = get_progression(number, step, 10)
-
-    secret_number_position = random.randint(0, 10)
+    progression = get_progression(number, step, LENGTH)
+    secret_number_position = random.randint(0, LENGTH)
     secret_number = str(progression[secret_number_position])
     progression[secret_number_position] = '..'
 
@@ -29,4 +29,4 @@ def get_question_and_answer():
 
 
 def start_game():
-    brain_games.cli.engine(get_question_and_answer, description)
+    brain_games.cli.start_game(get_question_and_answer, DESCRIPTION)

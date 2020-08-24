@@ -2,7 +2,7 @@ import random
 import brain_games.cli
 
 
-description = 'Answer "yes" if number even otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
 def get_question_and_answer():
@@ -18,4 +18,4 @@ def get_question_and_answer():
 
 
 def start_game():
-    brain_games.cli.engine(get_question_and_answer, description)
+    brain_games.cli.start_game(get_question_and_answer, DESCRIPTION)

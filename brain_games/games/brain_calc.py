@@ -3,7 +3,7 @@ import operator
 import brain_games.cli
 
 
-description = 'What is the result of the expression?'
+DESCRIPTION = 'What is the result of the expression?'
 
 
 def get_question_and_answer():
@@ -28,4 +28,4 @@ def get_question_and_answer():
 
 
 def start_game():
-    brain_games.cli.engine(get_question_and_answer, description)
+    brain_games.cli.start_game(get_question_and_answer, DESCRIPTION)
