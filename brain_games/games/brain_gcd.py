@@ -25,4 +25,4 @@ def get_question_and_answer():
 
 
 def start_game():
-    brain_games.cli.start_game(get_question_and_answer, DESCRIPTION)
+    brain_games.cli.play(get_question_and_answer, DESCRIPTION)

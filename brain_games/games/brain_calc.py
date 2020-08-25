@@ -8,7 +8,7 @@ DESCRIPTION = 'What is the result of the expression?'
 
 def get_question_and_answer():
     operations = ['+', '-', '*']
-    right_answer = ''
+    right_answer = 0
 
     first_number = random.randint(1, 25)
     second_number = random.randint(1, 25)
@@ -28,4 +28,4 @@ def get_question_and_answer():
 
 
 def start_game():
-    brain_games.cli.start_game(get_question_and_answer, DESCRIPTION)
+    brain_games.cli.play(get_question_and_answer, DESCRIPTION)

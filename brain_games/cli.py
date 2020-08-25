@@ -5,7 +5,7 @@ def check_answer(answer, right_answer):
     return answer == right_answer
 
 
-def start_game(get_question_and_answer, description):
+def play(get_question_and_answer, description):
     AMOUNT_OF_TRIES = 3
     print('Welcome to the Brain Games!')
     print(description, end='\n\n')
