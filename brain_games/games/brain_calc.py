@@ -8,7 +8,6 @@ DESCRIPTION = 'What is the result of the expression?'
 
 def get_question_and_answer():
     operations = ['+', '-', '*']
-    right_answer = 0
 
     first_number = random.randint(1, 25)
     second_number = random.randint(1, 25)
