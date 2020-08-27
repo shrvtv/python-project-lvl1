@@ -26,4 +26,5 @@ def play(get_question_and_answer, description):
         else:
             print(str(answer) + ' is wrong answer ;(. Correct answer was ' + str(right_answer))
             print("Let's try again, " + name + '!')
-    print('{}, {}!'.format('Congratulations', name))
+    else:
+        print('{}, {}!'.format('Congratulations', name))

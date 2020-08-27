@@ -17,8 +17,8 @@ def get_progression(number, step, length):
 def get_question_and_answer():
     LENGTH = 10
     step = random.randint(1, 10)
-    number = random.randint(0, 100)
-    progression = get_progression(number, step, LENGTH)
+    first_number = random.randint(0, 100)
+    progression = get_progression(first_number, step, LENGTH)
     secret_number_position = random.randint(0, LENGTH)
     secret_number = str(progression[secret_number_position])
     progression[secret_number_position] = '..'

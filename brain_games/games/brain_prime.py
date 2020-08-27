@@ -2,7 +2,6 @@ import random
 import brain_games.cli
 
 
-DICTIONARY = {True: 'yes', False: 'no'}
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
@@ -22,7 +21,7 @@ def is_prime(number):
 def get_question_and_answer():
     number = random.randint(1, 100)
 
-    right_answer = str(DICTIONARY.get(is_prime(number)))
+    right_answer = 'yes' if is_prime(number) else 'no'
 
     question = str(number)
     return question, right_answer
